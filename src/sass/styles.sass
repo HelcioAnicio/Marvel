@@ -5,8 +5,11 @@
 
 html
     body
-        height: 100vh
+        height: 100%
         width: 100%
+        background: #ed213a
+        background: -webkit-linear-gradient(to bottom, #ed213a, #93291e)
+        background: linear-gradient(to bottom, #ed213a, #93291e)
 
         .header
             position: relative
@@ -19,7 +22,6 @@ html
             background-size: cover
             background-position: center top
             background-repeat: no-repeat
-            // -webkit-mask-image: linear-gradient(to left, transparent 5%, black 100%)
 
             img
                 width: 60px
@@ -33,21 +35,21 @@ html
                 cursor: pointer
 
         .main
-            height: 1000px
+            // height: 1500px
 
             .container
                 width: 100%
-                height: 700px
-                border: 1px solid
+                height: 100%
                 display: flex
                 flex-direction: column
                 gap: 20px
 
                 .sectionOne
                     .title
-                        h4
+                        h3
                             text-align: center
                             margin-block: 15px
+                            color: white
 
                     .searchField
                         display: flex
@@ -73,10 +75,25 @@ html
                     display: flex
                     gap: 20px
                     flex-wrap: wrap
+                    padding: 0 10px
 
                     .divCaractere
                         flex: 1 1 100px
-                        background-color: gold
+                        background-color: #fff700
+                        text-align: center
+                        border-radius: 5px
+                        box-shadow: 5px 5px 3px 0px rgb(0, 0, 0)
 
                         img
-                            width: 140px
+                            width: 100%
+
+                        .divText
+                            padding: 0 10px 10px 10px
+
+                            p
+                                font-size: 0.8rem
+                                margin-top: 5px
+
+    // 4a6594ff9575100686737c454f288a3d2e9f883d PRIVATE
+    // 8e30179e891ae0ca9d101872b0217c7e PUBLIC
+// http(s)://gateway.marvel.com/
