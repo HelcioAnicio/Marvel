@@ -1,10 +1,6 @@
-
-
-// const publicApiKey = 
-// const privateApiKey = 
-
-const authentication = 'apikey=8e30179e891ae0ca9d101872b0217c7e&hash=232cc1a3d5ad13b80cf2ce6d224bb2f4&ts=1'
-const apikey = '8e30179e891ae0ca9d101872b0217c7e4a6594ff9575100686737c454f288a3d2e9f883d';
+const apiKey = process.env.API_KEY;
+const hash = process.env.HASH;
+const authentication = `apikey=${apiKey}&hash=${hash}&ts=1`
 
 const search = document.querySelector('#search');
 const searchButton = document.querySelector('.fa-search');
