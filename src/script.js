@@ -11,7 +11,7 @@ const paragraph = document.querySelector('p');
 
 
 const getAPI = async(searchValue) => {
-    const apiURL = `http://gateway.marvel.com/v1/public/characters?name=${searchValue}&${authentication}`
+    const apiURL = `https://gateway.marvel.com/v1/public/characters?name=${searchValue}&${authentication}`
     const response = await fetch(apiURL);
     const data = await response.json();
     console.log(data)
