@@ -3,23 +3,39 @@ const authentication = `apikey=8e30179e891ae0ca9d101872b0217c7e&hash=232cc1a3d5a
 const search = document.querySelector('#search');
 const searchButton = document.querySelector('.fa-search');
 
-const image = document.querySelector('.imageOne');
-const characterName = document.querySelector('.nameCharacter');
-const paragraph = document.querySelector('p');
+const image = document.querySelector('.image');
+const characterName = document.querySelector('.nameCharacterSearched');
+const paragraph = document.querySelector('.descriptionSearched');
 
+// Request Random
+const getApiAll = async() => {
+    const maxCharacters = 1500;
+    const offset = Math.floor((Math.random() * maxCharacters) + 1);
 
-
-
-const getAPI = async(searchValue) => {
-    const apiURL = `https://gateway.marvel.com/v1/public/characters?name=${searchValue}&${authentication}`
-    const response = await fetch(apiURL);
+    const apiUrlAll = `https://gateway.marvel.com/v1/public/characters?limit=9&offset=${offset}&${authentication}`
+    const response = await fetch(apiUrlAll);
     const data = await response.json();
     console.log(data)
     return data;
   };
+
+
+
+
+
+
+// Request after click
+const getApiOne = async(searchValue) => {
+    const apiUrlOne = `https://gateway.marvel.com/v1/public/characters?name=${searchValue}&${authentication}`
+    const response = await fetch(apiUrlOne);
+    const data = await response.json();
+    console.log(data)
+    return data;
+  };
+
   
   const showRequest = async(searchValue) => {
-    const data = await getAPI(searchValue);
+    const data = await getApiOne(searchValue);
     search.value = ''
 
     characterName.innerHTML = data.data.results[0].name;
@@ -35,7 +51,7 @@ const getAPI = async(searchValue) => {
 //  EVENT
 searchButton.addEventListener('click', ()=>{
     const searchValue = search.value;
-    console.log(searchValue)
+    getApiAll()
     showRequest(searchValue);
 })
 
