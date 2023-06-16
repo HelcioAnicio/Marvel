@@ -5,7 +5,7 @@
 }
 
 html body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: #ed213a;
   background: -webkit-linear-gradient(to bottom, #ed213a, #93291e);
@@ -72,20 +72,20 @@ html body .main .container .sectionTwo {
   flex-wrap: wrap;
   padding: 0 10px;
 }
-html body .main .container .sectionTwo .divCaractere {
+html body .main .container .sectionTwo .divCaracter {
   flex: 1 1 100px;
   background-color: #fff700;
   text-align: center;
   border-radius: 5px;
   box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
 }
-html body .main .container .sectionTwo .divCaractere img {
+html body .main .container .sectionTwo .divCaracter img {
   width: 100%;
 }
-html body .main .container .sectionTwo .divCaractere .divText {
+html body .main .container .sectionTwo .divCaracter .divText {
   padding: 0 10px 10px 10px;
 }
-html body .main .container .sectionTwo .divCaractere .divText p {
+html body .main .container .sectionTwo .divCaracter .divText p {
   font-size: 0.8rem;
   margin-top: 5px;
 }
