@@ -79,7 +79,7 @@ html body .main .container .sectionTwo .divCaracter {
   border-radius: 5px;
   box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
 }
-html body .main .container .sectionTwo .divCaracter img {
+html body .main .container .sectionTwo .divCaracter .image {
   width: 100%;
 }
 html body .main .container .sectionTwo .divCaracter .divText {

@@ -22,11 +22,14 @@ const getApiAll = async() => {
 
 async function useApi() {
   const data = await getApiAll();
-  data.data.results.forEach(element => {
-    // divCaracter.appendChild()
+  data.data.results[0].forEach(element => {
+    console.log(element)
     createBox()
-    
-
+    image.setAttribute(
+      "src",
+      `${element.thumbnail.path}/detail.${element.thumbnail.extension}`
+    ) 
+    nameCharacter.innerHTML = `${element.name}` 
   });
 }
 
@@ -51,11 +54,10 @@ createBox = () => {
   divText.appendChild(nameCharacter);
   divText.appendChild(paragraph);
 
-  const sectionTwo = document.querySelector('.sectionTwo');
+  let sectionTwo = document.querySelector('.sectionTwo');
   sectionTwo.appendChild(divCaracter)
 }
-
-createBox()
+useApi()
 
 
 
@@ -79,6 +81,8 @@ const showRequest = async(searchValue) => {
   `${data.data.results[0].thumbnail.path}/detail.jpg`
 );
 }
+
+
 
 //  EVENT
 searchButton.addEventListener('click', ()=>{
