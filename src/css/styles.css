@@ -72,39 +72,25 @@ html body .main .container .sectionTwo {
   flex-wrap: wrap;
   padding: 0 10px;
 }
-html body .main .container .sectionTwo .divCaracter {
+html body .main .container .sectionTwo .divSearched, html body .main .container .sectionTwo .divCharacter {
+  width: 100%;
+  background-color: #fff700;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
+}
+html body .main .container .sectionTwo .divSearched img, html body .main .container .sectionTwo .divCharacter img {
+  width: 100%;
+}
+html body .main .container .sectionTwo .divSearched div, html body .main .container .sectionTwo .divCharacter div {
+  padding: 0 10px 10px 10px;
+}
+html body .main .container .sectionTwo .divSearched div p, html body .main .container .sectionTwo .divCharacter div p {
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+html body .main .container .sectionTwo .divCharacter {
   flex: 1 1 100px;
-  background-color: #fff700;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
-}
-html body .main .container .sectionTwo .divCaracter .image {
-  width: 100%;
-}
-html body .main .container .sectionTwo .divCaracter .divText {
-  padding: 0 10px 10px 10px;
-}
-html body .main .container .sectionTwo .divCaracter .divText p {
-  font-size: 0.8rem;
-  margin-top: 5px;
-}
-html body .main .container .sectionTwo .divSearched {
-  width: 100%;
-  background-color: #fff700;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
-}
-html body .main .container .sectionTwo .divSearched img {
-  width: 100%;
-}
-html body .main .container .sectionTwo .divSearched .divText {
-  padding: 0 10px 10px 10px;
-}
-html body .main .container .sectionTwo .divSearched .divText p {
-  font-size: 0.8rem;
-  margin-top: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
