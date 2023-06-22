@@ -35,22 +35,29 @@ async function useApi(divCharacterRandom, divImageRandom, imageRandom, divTextRa
 
 // useApi()
 createBox = (element) => {
-  
-  console.log('dentro do create box', element)
   let divCharacterRandom = document.createElement('div')
   divCharacterRandom.className = 'divCharacterRandom'
-  divImageRandom = document.createElement('div')
+
+  let divImageRandom = document.createElement('div')
   divImageRandom.className = 'divImageRandom'
-  imageRandom = document.createElement('img')
+  
+  let imageRandom = document.createElement('img')
   imageRandom.className = 'imageRandom'
-  imageRandom.src = 'assets/Marvel_universe.png'
-  divTextRandom = document.createElement('div')
+  imageRandom.src = `${element.thumbnail.path}.jpg`
+  
+  let divTextRandom = document.createElement('div')
   divTextRandom.className = 'divTextRandom'
-  nameCharacterRandom = document.createElement('h4')
+  
+  let nameCharacterRandom = document.createElement('h4')
   nameCharacterRandom.className = 'nameCharacterRandom'
   nameCharacterRandom.innerText = element.name
-  paragraphRandom = document.createElement('p')
+  
+  let paragraphRandom = document.createElement('p')
   paragraphRandom.className = 'paragraphRandom'
+  paragraphRandom.innerText = element.description
+  
+  let sectionThree = document.querySelector('.sectionThree');
+  sectionThree.appendChild(divCharacterRandom)
   
   divCharacterRandom.appendChild(divImageRandom);
   divImageRandom.appendChild(imageRandom);
@@ -58,8 +65,6 @@ createBox = (element) => {
   divTextRandom.appendChild(nameCharacterRandom);
   divTextRandom.appendChild(paragraphRandom);
 
-  let sectionTwo = document.querySelector('.sectionTwo');
-  sectionTwo.appendChild(divCharacterRandom)
 }
 useApi()
 
@@ -90,7 +95,6 @@ const showRequestSearched = async(searchValue) => {
 //  EVENT
 searchButton.addEventListener('click', ()=>{
     const searchValue = search.value;
-    getApiAll()
     showRequestSearched(searchValue);
 })
 
