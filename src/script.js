@@ -19,17 +19,11 @@ const getApiRandom = async() => {
   return data;
 };
 
-async function useApi(divCharacterRandom, divImageRandom, imageRandom, divTextRandom, nameCharacterRandom, paragraphRandom) {
+async function useApi() {
   const data = await getApiRandom();
   data.data.results.forEach(element => {
     console.log(element)
-
     createBox(element)
-    // imageRandom.setAttribute(
-    //   "src",
-    //   `${element.thumbnail.path}/detail.jpg`
-    // ) 
-    // nameCharacterRandom.innerHTML = `${element.name}` 
   });
 }
 

@@ -10,6 +10,7 @@ html body {
   background: #ed213a;
   background: -webkit-linear-gradient(to bottom, #ed213a, #93291e);
   background: linear-gradient(to bottom, #ed213a, #93291e);
+  padding-bottom: 50px;
 }
 html body .header {
   position: relative;
@@ -50,21 +51,31 @@ html body .main .container .sectionOne .searchField {
   display: flex;
   align-items: center;
   height: 25px;
-  width: max-content;
-  margin: 0 auto;
+  width: 100%;
+  padding-inline: 5px;
 }
 html body .main .container .sectionOne .searchField #search {
   padding: 2px 5px;
   margin-right: 5px;
   height: 100%;
-  border-radius: 5px;
-  outline-offset: none;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px solid;
+}
+html body .main .container .sectionOne .searchField #search::placeholder {
+  color: black;
+}
+html body .main .container .sectionOne .searchField #search:focus {
+  border: none;
+  border-bottom: 2px solid;
 }
 html body .main .container .sectionOne .searchField .fa-search {
   padding: 5px;
   height: 100%;
   border: none;
   border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0);
 }
 html body .main .container .sectionTwo {
   display: flex;
@@ -72,20 +83,20 @@ html body .main .container .sectionTwo {
   flex-wrap: wrap;
   padding: 0 10px;
 }
-html body .main .container .sectionTwo .divSearched, html body .main .container .sectionTwo .divCharacter {
+html body .main .container .sectionTwo .divSearched {
   width: 100%;
   background-color: #fff700;
   text-align: center;
   border-radius: 5px;
   box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
 }
-html body .main .container .sectionTwo .divSearched img, html body .main .container .sectionTwo .divCharacter img {
+html body .main .container .sectionTwo .divSearched .divImageSearched .imageSearched {
   width: 100%;
 }
-html body .main .container .sectionTwo .divSearched div, html body .main .container .sectionTwo .divCharacter div {
+html body .main .container .sectionTwo .divSearched .divTextSearched {
   padding: 0 10px 10px 10px;
 }
-html body .main .container .sectionTwo .divSearched div p, html body .main .container .sectionTwo .divCharacter div p {
+html body .main .container .sectionTwo .divSearched .divTextSearched p {
   font-size: 0.8rem;
   margin-top: 5px;
 }
@@ -95,20 +106,25 @@ html body .main .container .sectionThree {
   flex-wrap: wrap;
   padding: 0 10px;
 }
-html body .main .container .sectionThree .divCharacter {
-  flex: 1 1 100px;
+html body .main .container .sectionThree .divCharacterRandom {
+  flex: 1 1 150px;
+  max-width: 300px;
   background-color: #fff700;
   text-align: center;
   border-radius: 5px;
   box-shadow: 5px 5px 3px 0px rgb(0, 0, 0);
 }
-html body .main .container .sectionThree .divCharacter img {
-  width: 100%;
+html body .main .container .sectionThree .divCharacterRandom .divImageRandom {
+  padding: 5px;
 }
-html body .main .container .sectionThree .divCharacter div {
+html body .main .container .sectionThree .divCharacterRandom .divImageRandom .imageRandom {
+  width: 100%;
+  border-radius: 5px;
+}
+html body .main .container .sectionThree .divCharacterRandom .divTextRandom {
   padding: 0 10px 10px 10px;
 }
-html body .main .container .sectionThree .divCharacter div p {
+html body .main .container .sectionThree .divCharacterRandom .divTextRandom p {
   font-size: 0.8rem;
   margin-top: 5px;
 }
