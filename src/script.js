@@ -19,12 +19,25 @@ const getApiRandom = async() => {
   return data;
 };
 
+// async function useApi() {
+//   const data = await getApiRandom();
+//   data.data.results.forEach(element => {
+//     console.log(element)
+//     createBox(element)
+//   });
+// }
 async function useApi() {
   const data = await getApiRandom();
-  data.data.results.forEach(element => {
-    console.log(element)
-    createBox(element)
-  });
+  let informations = data.data.results;
+  for (let index = 0; index = 8; index++) {
+    console.log(informations[index])
+    createBox(informations)
+  }
+  
+  // data.data.results.forEach(element => {
+  //   console.log(element)
+  //   createBox(element)
+  // });
 }
 
 // useApi()
