@@ -35,17 +35,18 @@ html
                 cursor: pointer
 
         .main
+            padding-bottom: 100px
+
             .container
                 width: 100%
                 height: 100%
                 display: flex
                 flex-direction: column
                 gap: 20px
-                padding-bottom: 50px
 
                 .sectionOne
                     .title
-                        h3
+                        .titleText
                             text-align: center
                             margin-block: 15px
                             color: white
@@ -66,10 +67,11 @@ html
                             background-color: rgba(0, 0, 0, 0)
                             border: none
                             border-bottom: 2px solid
-                            font-family: 'Belanosima', sans-serif
+                            font: 400 1.2rem 'Ysabeau Infant', sans-serif
 
                             &::placeholder
                                 color: black
+                                font: 400 .8rem 'Ysabeau Infant', sans-serif
 
                             &:focus
                                 border: none
@@ -110,9 +112,6 @@ html
                                 height: max-content
                                 margin: 0 auto
                                 padding-bottom: 5px
-
-                                // &:hover+.descriptionRandom
-                                //     display: block
 
                             .descriptionSearched, .descriptionRandom
                                 font: 400 0.9rem/18px 'Mukta', sans-serif

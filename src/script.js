@@ -24,13 +24,13 @@ const getApiRandom = async() => {
 
 async function useApi() {
   const data = await getApiRandom();
-  data.data.results.forEach(element => {
-    console.log(element)
-    createBox(element)
+  data.data.results.forEach(elementRandom => {
+    console.log(elementRandom)
+    createBoxRandom(elementRandom)
   });
 }
 
-createBox = (element) => {
+createBoxRandom = (elementRandom) => {
   let divCharacterRandom = document.createElement('div')
   divCharacterRandom.className = 'divCharacterRandom'
 
@@ -39,18 +39,18 @@ createBox = (element) => {
   
   let imageRandom = document.createElement('img')
   imageRandom.className = 'imageRandom'
-  imageRandom.src = `${element.thumbnail.path}.jpg`
+  imageRandom.src = `${elementRandom.thumbnail.path}/standard_fantastic.jpg`
   
   let divTextRandom = document.createElement('div')
   divTextRandom.className = 'divTextRandom'
   
   let nameCharacterRandom = document.createElement('h4')
   nameCharacterRandom.className = 'nameCharacterRandom'
-  nameCharacterRandom.innerText = element.name
+  nameCharacterRandom.innerText = elementRandom.name
   
   let descriptionRandom = document.createElement('p')
   descriptionRandom.className = 'descriptionRandom'
-  descriptionRandom.innerText = element.description == '' ? descriptionRandom.innerHTML = 'No description at the moment' : descriptionRandom.innerHTML = element.description;
+  descriptionRandom.innerText = elementRandom.description == '' ? descriptionRandom.innerHTML = 'No description at the moment' : descriptionRandom.innerHTML = elementRandom.description;
 
   
   let sectionThree = document.querySelector('.sectionThree');
@@ -65,9 +65,10 @@ createBox = (element) => {
 useApi()
 
 
+
 // Request after click
 const getApiOneSearched = async(searchValue) => {
-  const apiUrlSearched = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${searchValue}&${authentication}`
+  const apiUrlSearched = `https://gateway.marvel.com/v1/public/characters?limit=20&nameStartsWith=${searchValue}&${authentication}`
   const response = await fetch(apiUrlSearched);
   const data = await response.json();
   console.log(data)
@@ -79,13 +80,43 @@ const showRequestSearched = async(searchValue) => {
   sectionTwo.style.display = 'flex'
   sectionThree.style.display = 'none'
   search.value = ''
+  data.data.results.forEach(elementSearched => {
+    console.log(elementSearched)
+    createBoxSearched(elementSearched)
+  });
+}
 
-  characterNameSearched.innerHTML = data.data.results[0].name;
-  data.data.results[0].description == '' ? descriptionSearched.innerHTML = 'No description at the moment' : descriptionSearched.innerHTML = data.data.results[0].description;
-  imageSearched.setAttribute(
-  "src",
-  `${data.data.results[0].thumbnail.path}/detail.jpg`
-);
+createBoxSearched = (elementSearched) => {
+  let divSearched = document.createElement('div')
+  divSearched.className = 'divSearched'
+
+  let divImageSearched = document.createElement('div')
+  divImageSearched.className = 'divImageSearched'
+  
+  let imageSearched = document.createElement('img')
+  imageSearched.className = 'imageSearched'
+  imageSearched.src = `${elementSearched.thumbnail.path}/standard_fantastic.jpg`
+  
+  let divTextSearched = document.createElement('div')
+  divTextSearched.className = 'divTextSearched'
+  
+  let nameCharacterSearched = document.createElement('h4')
+  nameCharacterSearched.className = 'nameCharacterSearched'
+  nameCharacterSearched.innerText = elementSearched.name
+  
+  let descriptionSearched = document.createElement('p')
+  descriptionSearched.className = 'descriptionSearched'
+  descriptionSearched.innerText = elementSearched.description == '' ? descriptionSearched.innerHTML = 'No description at the moment' : descriptionSearched.innerHTML = elementSearched.description;
+
+  
+  let sectionTwo = document.querySelector('.sectionTwo');
+  sectionTwo.appendChild(divSearched)
+  
+  divSearched.appendChild(divImageSearched);
+  divImageSearched.appendChild(imageSearched);
+  divSearched.appendChild(divTextSearched);
+  divTextSearched.appendChild(nameCharacterSearched);
+  divTextSearched.appendChild(descriptionSearched);
 }
 
 
