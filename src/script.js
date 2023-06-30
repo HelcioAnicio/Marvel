@@ -50,8 +50,12 @@ createBoxRandom = (elementRandom) => {
   
   let descriptionRandom = document.createElement('p')
   descriptionRandom.className = 'descriptionRandom'
-  descriptionRandom.innerText = elementRandom.description == '' ? descriptionRandom.innerHTML = 'No description at the moment' : descriptionRandom.innerHTML = elementRandom.description;
+  descriptionRandom.innerText = elementRandom.description == '' ? descriptionRandom.innerHTML = "Marvel didn't provide information" : descriptionRandom.innerHTML = elementRandom.description;
 
+  let moreInformation = document.createElement('button')
+  moreInformation.className = 'moreInformation'
+  moreInformation.innerText = 'More information'
+  moreInformation.setAttribute('type', 'button');
   
   let sectionThree = document.querySelector('.sectionThree');
   sectionThree.appendChild(divCharacterRandom)
@@ -61,6 +65,7 @@ createBoxRandom = (elementRandom) => {
   divCharacterRandom.appendChild(divTextRandom);
   divTextRandom.appendChild(nameCharacterRandom);
   divTextRandom.appendChild(descriptionRandom);
+  divCharacterRandom.appendChild(moreInformation)
 }
 useApi()
 
@@ -80,9 +85,11 @@ const showRequestSearched = async(searchValue) => {
   sectionTwo.style.display = 'flex'
   sectionThree.style.display = 'none'
   search.value = ''
+  sectionTwo.innerText = ''
+
   data.data.results.forEach(elementSearched => {
-    console.log(elementSearched)
-    createBoxSearched(elementSearched)
+  console.log(elementSearched)
+  createBoxSearched(elementSearched)
   });
 }
 
@@ -106,7 +113,7 @@ createBoxSearched = (elementSearched) => {
   
   let descriptionSearched = document.createElement('p')
   descriptionSearched.className = 'descriptionSearched'
-  descriptionSearched.innerText = elementSearched.description == '' ? descriptionSearched.innerHTML = 'No description at the moment' : descriptionSearched.innerHTML = elementSearched.description;
+  descriptionSearched.innerText = elementSearched.description == '' ? descriptionSearched.innerHTML = "Marvel didn't provide information" : descriptionSearched.innerHTML = elementSearched.description;
 
   
   let sectionTwo = document.querySelector('.sectionTwo');
