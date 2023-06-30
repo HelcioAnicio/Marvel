@@ -118,6 +118,41 @@ html
                                 margin-top: 10px
                                 padding: 0 10px 10px 10px
 
+                        .moreInformation
+                            cursor: pointer
+                            padding: 5px 15px
+                            width: 150px
+                            background-color: transparent
+                            border: none
+                            border-radius: 5px
+                            margin-block: 15px
+                            font: 400 .9rem 'Mukta', sans-serif
+                            overflow: hidden
+                            z-index: 1
+                            position: relative
+                            transition: color .5s .3s
+
+                            &::before
+                                content: ''
+                                width: 0
+                                height: 40px
+                                position: absolute
+                                border: none
+                                border-radius: 5px
+                                top: 0
+                                left: 0
+                                z-index: -1
+                                transition: width ease 1s
+                                display: block
+                                background: rgb(255,0,0)
+                                background: linear-gradient(86deg, rgba(255,0,0,1) 0%, rgba(171,0,0,1) 48%, rgba(103,0,0,1) 100%)
+
+                        .moreInformation:hover::before
+                            width: 150px
+
+                        .moreInformation:hover
+                            color: white
+
                 .sectionTwo
                     display: none
 
