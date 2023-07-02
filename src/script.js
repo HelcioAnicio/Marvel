@@ -52,6 +52,9 @@ createBoxRandom = (elementRandom) => {
   descriptionRandom.className = 'descriptionRandom'
   descriptionRandom.innerText = elementRandom.description == '' ? descriptionRandom.innerHTML = "Marvel didn't provide information" : descriptionRandom.innerHTML = elementRandom.description;
 
+  let linkCharacter = document.createElement('a')
+  linkCharacter.href = "https://www.google.com.br";
+
   let moreInformation = document.createElement('button')
   moreInformation.className = 'moreInformation'
   moreInformation.innerText = 'More information'
@@ -65,7 +68,8 @@ createBoxRandom = (elementRandom) => {
   divCharacterRandom.appendChild(divTextRandom);
   divTextRandom.appendChild(nameCharacterRandom);
   divTextRandom.appendChild(descriptionRandom);
-  divCharacterRandom.appendChild(moreInformation)
+  divCharacterRandom.appendChild(linkCharacter)
+  linkCharacter.appendChild(moreInformation)
 }
 useApi()
 

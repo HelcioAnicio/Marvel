@@ -107,7 +107,7 @@ html body .main .container .sectionTwo .divSearched .divTextSearched .nameCharac
   width: 80%;
   height: max-content;
   margin: 0 auto;
-  padding-bottom: 5px;
+  padding-block: 5px;
 }
 html body .main .container .sectionTwo .divSearched .divTextSearched .descriptionSearched, html body .main .container .sectionTwo .divSearched .divTextSearched .descriptionRandom, html body .main .container .sectionTwo .divSearched .divTextRandom .descriptionSearched, html body .main .container .sectionTwo .divSearched .divTextRandom .descriptionRandom, html body .main .container .sectionTwo .divCharacterRandom .divTextSearched .descriptionSearched, html body .main .container .sectionTwo .divCharacterRandom .divTextSearched .descriptionRandom, html body .main .container .sectionTwo .divCharacterRandom .divTextRandom .descriptionSearched, html body .main .container .sectionTwo .divCharacterRandom .divTextRandom .descriptionRandom, html body .main .container .sectionThree .divSearched .divTextSearched .descriptionSearched, html body .main .container .sectionThree .divSearched .divTextSearched .descriptionRandom, html body .main .container .sectionThree .divSearched .divTextRandom .descriptionSearched, html body .main .container .sectionThree .divSearched .divTextRandom .descriptionRandom, html body .main .container .sectionThree .divCharacterRandom .divTextSearched .descriptionSearched, html body .main .container .sectionThree .divCharacterRandom .divTextSearched .descriptionRandom, html body .main .container .sectionThree .divCharacterRandom .divTextRandom .descriptionSearched, html body .main .container .sectionThree .divCharacterRandom .divTextRandom .descriptionRandom {
   font: 400 0.9rem/18px "Mukta", sans-serif;
@@ -116,24 +116,29 @@ html body .main .container .sectionTwo .divSearched .divTextSearched .descriptio
 }
 html body .main .container .sectionTwo .divSearched .moreInformation, html body .main .container .sectionTwo .divCharacterRandom .moreInformation, html body .main .container .sectionThree .divSearched .moreInformation, html body .main .container .sectionThree .divCharacterRandom .moreInformation {
   cursor: pointer;
-  padding: 5px 15px;
-  width: 150px;
-  background-color: transparent;
-  border: none;
-  border-radius: 5px;
-  margin-block: 15px;
+  opacity: 1;
   font: 400 0.9rem "Mukta", sans-serif;
-  overflow: hidden;
+  background-color: transparent;
+  color: blue;
+  background-image: url("/src/assets/iron_man.png");
+  background-position: -85px center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  padding: 5px 5px;
+  width: 150px;
+  margin-block: 10px;
   z-index: 1;
   position: relative;
-  transition: color 0.5s 0.3s;
+  transition: color, background-position 0.5s 0.3s;
+  overflow: hidden;
+  text-align: right;
 }
 html body .main .container .sectionTwo .divSearched .moreInformation::before, html body .main .container .sectionTwo .divCharacterRandom .moreInformation::before, html body .main .container .sectionThree .divSearched .moreInformation::before, html body .main .container .sectionThree .divCharacterRandom .moreInformation::before {
   content: "";
   width: 0;
-  height: 40px;
+  height: 100%;
   position: absolute;
-  border: none;
   border-radius: 5px;
   top: 0;
   left: 0;
@@ -142,9 +147,6 @@ html body .main .container .sectionTwo .divSearched .moreInformation::before, ht
   display: block;
   background: rgb(255, 0, 0);
   background: linear-gradient(86deg, rgb(255, 0, 0) 0%, rgb(171, 0, 0) 48%, rgb(103, 0, 0) 100%);
-}
-html body .main .container .sectionTwo .divSearched .moreInformation:hover::before, html body .main .container .sectionTwo .divCharacterRandom .moreInformation:hover::before, html body .main .container .sectionThree .divSearched .moreInformation:hover::before, html body .main .container .sectionThree .divCharacterRandom .moreInformation:hover::before {
-  width: 150px;
 }
 html body .main .container .sectionTwo .divSearched .moreInformation:hover, html body .main .container .sectionTwo .divCharacterRandom .moreInformation:hover, html body .main .container .sectionThree .divSearched .moreInformation:hover, html body .main .container .sectionThree .divCharacterRandom .moreInformation:hover {
   color: white;

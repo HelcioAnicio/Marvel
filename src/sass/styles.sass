@@ -111,7 +111,7 @@ html
                                 width: 80%
                                 height: max-content
                                 margin: 0 auto
-                                padding-bottom: 5px
+                                padding-block: 5px
 
                             .descriptionSearched, .descriptionRandom
                                 font: 400 0.9rem/18px 'Mukta', sans-serif
@@ -120,24 +120,30 @@ html
 
                         .moreInformation
                             cursor: pointer
-                            padding: 5px 15px
-                            width: 150px
-                            background-color: transparent
-                            border: none
-                            border-radius: 5px
-                            margin-block: 15px
+                            opacity: 1
                             font: 400 .9rem 'Mukta', sans-serif
-                            overflow: hidden
+                            background-color: transparent
+                            color: blue
+                            background-image: url('/src/assets/iron_man.png')
+                            background-position: -85px center
+                            background-size: cover
+                            background-repeat: no-repeat
+                            border-radius: 5px
+                            padding: 5px 5px
+                            width: 150px
+                            margin-block: 10px
                             z-index: 1
                             position: relative
-                            transition: color .5s .3s
+                            transition: color, background-position .5s .3s
+                            overflow: hidden
+                            text-align: right
 
                             &::before
                                 content: ''
                                 width: 0
-                                height: 40px
+                                height: 100%
                                 position: absolute
-                                border: none
+                                // border: 1px solid
                                 border-radius: 5px
                                 top: 0
                                 left: 0
@@ -148,7 +154,7 @@ html
                                 background: linear-gradient(86deg, rgba(255,0,0,1) 0%, rgba(171,0,0,1) 48%, rgba(103,0,0,1) 100%)
 
                         .moreInformation:hover::before
-                            width: 150px
+                            // width: 100%
 
                         .moreInformation:hover
                             color: white
