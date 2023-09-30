@@ -128,25 +128,10 @@ html body .main .container .sectionTwo .divSearched .moreInformation, html body 
   padding: 5px 5px;
   width: 150px;
   margin-block: 10px;
-  z-index: 1;
   position: relative;
   transition: color, background-position 0.5s 0.3s;
   overflow: hidden;
   text-align: right;
-}
-html body .main .container .sectionTwo .divSearched .moreInformation::before, html body .main .container .sectionTwo .divCharacterRandom .moreInformation::before, html body .main .container .sectionThree .divSearched .moreInformation::before, html body .main .container .sectionThree .divCharacterRandom .moreInformation::before {
-  content: "";
-  width: 0;
-  height: 100%;
-  position: absolute;
-  border-radius: 5px;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: width ease 1s;
-  display: block;
-  background: rgb(255, 0, 0);
-  background: linear-gradient(86deg, rgb(255, 0, 0) 0%, rgb(171, 0, 0) 48%, rgb(103, 0, 0) 100%);
 }
 html body .main .container .sectionTwo .divSearched .moreInformation:hover, html body .main .container .sectionTwo .divCharacterRandom .moreInformation:hover, html body .main .container .sectionThree .divSearched .moreInformation:hover, html body .main .container .sectionThree .divCharacterRandom .moreInformation:hover {
   color: white;
